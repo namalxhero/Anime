@@ -20,10 +20,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          # මෙතන තිබ්බ cache: npm අයින් කළා Lock file එක අහන එක නවත්වන්න
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm install 
+        # npm ci වෙනුවට npm install දැම්මා, එතකොට auto install වෙනවා
 
       - name: Build Project
         run: npm run build
